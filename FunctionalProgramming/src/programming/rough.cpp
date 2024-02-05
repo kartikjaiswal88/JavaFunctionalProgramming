@@ -84,7 +84,36 @@ int binarysearch(int arr[], int n, int k)
     return -1;
 }
 
+void indexes(vector<long long> v, long long x)
+{
+    long long l = 0;
+    long long maxi = INT_MIN;
+    long long h = v.size() - 1;
+    long long mini = INT_MAX;
+    int i=1;
+    while (l < h)
+    {
+        cout<<"Iteration:"<<i++<<endl;
+        long long m = l + (h - l) / 2;
+
+        if (v[m] == x)
+        {
+            maxi = max(maxi, m);
+            mini = min(mini, m);
+        }
+        else if (v[m] < x)
+            l = m + 1;
+        else
+            h = m - 1;
+    }
+
+    cout << "Maxi" << maxi << endl;
+    cout << "Mini" << mini << endl;
+}
+
 int main()
 {
-    cout << "Hello" << endl;
+    vector<long long> arr = {1, 2, 2, 3, 4, 5};
+    indexes(arr,2);
+
 }
