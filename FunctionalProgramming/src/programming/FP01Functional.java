@@ -23,7 +23,9 @@ public class FP01Functional {
 
         // numbers.stream().forEach(FP01Functional::/print); // Method Reference
         numbers.stream()
-                .filter(FP01Functional::isEven) // Only filter the even numbers
-                .forEach(System.out::println);
+               .filter(num->num%2 == 0) //Lambda Expression
+               .forEach(System.out::println);
+               
+        // .filter(FP01Functional::isEven) // Only filter the even numbers
     }
 }
