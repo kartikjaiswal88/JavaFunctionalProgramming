@@ -14,6 +14,13 @@ public class Exercise {
                 .forEach(System.out::println);
         System.out.println();
 
+        System.out.println("Printing the Cube of Odd Numbers:");
+        numbers.stream()
+                .filter(num -> num % 2 == 1)
+                .map(num -> num* num * num)
+                .forEach(System.out::println);
+        System.out.println();
+
         System.out.println("Printing all the Courses");
         courses.stream()
                 .forEach(System.out::println);
@@ -28,6 +35,12 @@ public class Exercise {
         System.out.println("Printing Courses having atleast 4 characters");
         courses.stream()
                 .filter(course -> course.length()>=4)
+                .forEach(System.out::println);
+        System.out.println();
+
+        System.out.println("Printing the number of characters in Each Course    ");
+        courses.stream()
+                .map(course -> course + " " + course.length())
                 .forEach(System.out::println);
         System.out.println();
 
