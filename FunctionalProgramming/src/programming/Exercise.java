@@ -17,7 +17,7 @@ public class Exercise {
         System.out.println("Printing the Cube of Odd Numbers:");
         numbers.stream()
                 .filter(num -> num % 2 == 1)
-                .map(num -> num* num * num)
+                .map(num -> num * num * num)
                 .forEach(System.out::println);
         System.out.println();
 
@@ -34,7 +34,7 @@ public class Exercise {
 
         System.out.println("Printing Courses having atleast 4 characters");
         courses.stream()
-                .filter(course -> course.length()>=4)
+                .filter(course -> course.length() >= 4)
                 .forEach(System.out::println);
         System.out.println();
 
