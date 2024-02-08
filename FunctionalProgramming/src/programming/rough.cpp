@@ -90,10 +90,10 @@ void indexes(vector<long long> v, long long x)
     long long maxi = INT_MIN;
     long long h = v.size() - 1;
     long long mini = INT_MAX;
-    int i=1;
+    int i = 1;
     while (l < h)
     {
-        cout<<"Iteration:"<<i++<<endl;
+        cout << "Iteration:" << i++ << endl;
         long long m = l + (h - l) / 2;
 
         if (v[m] == x)
@@ -114,6 +114,5 @@ void indexes(vector<long long> v, long long x)
 int main()
 {
     vector<long long> arr = {1, 2, 2, 3, 4, 5};
-    indexes(arr,2);
-
+    indexes(arr, 2);
 }
